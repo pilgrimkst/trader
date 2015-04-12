@@ -2,6 +2,8 @@ package kz.pilgrimkst.trader.api
 
 import com.typesafe.scalalogging.Logger
 import dispatch.{as, Req}
+import org.json4s._
+import org.json4s.native.JsonMethods._
 import org.slf4j.LoggerFactory
 
 
@@ -25,5 +27,16 @@ object HttpHelper {
       }
     }
   }
+
+
+  object read {
+
+    object Json extends (Res => JValue) {
+      def apply(r: Res) =
+        (dispatch.as.String andThen (parse(_, useBigDecimalForDouble = true)))(r)
+    }
+
+  }
+
 
 }

@@ -7,7 +7,7 @@
         </layout>
     </appender>
 
-    <logger name="kz.pilgrimkst.trader" level="TRACE"/>
+    <logger name="kz.pilgrimkst.trader" level="INFO"/>
     <logger name="dispatcher" level="INFO"/>
     <logger name="com.ning.http.client" level="INFO"/>
 

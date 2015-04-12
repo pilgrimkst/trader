@@ -18,6 +18,6 @@ case class Currency(code: String)
 
 sealed trait OrderType
 
-case object BUY extends OrderType
+case object BID extends OrderType
 
-case object SELL extends OrderType
+case object ASK extends OrderType
